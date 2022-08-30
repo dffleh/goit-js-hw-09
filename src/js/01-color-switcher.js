@@ -16,16 +16,18 @@ function getRandomHexColor() {
 }
 
 function fnColorSetIntStart() {
-    if (this.isActive) {
+    if (refs.startBtn.isActive) {
         return
     }
-    this.isActive = true
+    refs.startBtn.isActive = true
     colorId = setInterval(() => {
         refs.body.style.backgroundColor = getRandomHexColor()
     }, 1000);
+    console.log(refs.startBtn.isActive)
 }
 
 function fnColorSetIntStop() {
     clearInterval(colorId)
-    this.isActive = false
+    refs.startBtn.isActive = false
+    console.log(refs.startBtn.isActive)
 }
