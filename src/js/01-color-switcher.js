@@ -23,11 +23,9 @@ function fnColorSetIntStart() {
     colorId = setInterval(() => {
         refs.body.style.backgroundColor = getRandomHexColor()
     }, 1000);
-    console.log(this.isActive);
 }
 
 function fnColorSetIntStop() {
     clearInterval(colorId)
     this.isActive = false
-    console.log(this.isActive);
 }
